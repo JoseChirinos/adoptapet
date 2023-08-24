@@ -1,0 +1,19 @@
+.pet-filter-overlay {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  height: 100vh;
+}
+
+.pet-filter-action-mobile {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 168px;
+  background: linear-gradient(359.07deg, #FFFFFF -30.85%, rgba(255, 255, 255, 0.97) 133.88%);
+  /* background-color: red; */
+}

@@ -1,0 +1,114 @@
+.pet-card-container {
+  display: flex;
+  flex-direction: column;
+  width: 285px;
+  height: auto;
+  padding-bottom: 16px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  margin: 24px 0px;
+}
+
+.pet-card-slider {
+  overflow: hidden;
+  height: 190px;
+  border-radius: 8px 8px 0px 0px;
+}
+
+
+.pet-card-slider .slick-dots {
+  bottom: 12px !important;
+}
+
+.pet-card-slider .slick-dots li {
+  margin: 0 !important;
+}
+
+.pet-card-slider .slick-dots li,
+.pet-card-slider .slick-dots li button,
+.pet-card-slider .slick-dots li button:before {
+  font-size: 8px !important;
+  width: 14px !important;
+  height: 14px !important;
+}
+
+.pet-card-slider .slick-dots li button:before {
+  opacity: .4;
+  color: #fff;
+}
+
+.pet-card-slider .slick-dots li.slick-active button:before {
+  opacity: 1;
+  color: #fff;
+}
+
+.pet-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.pet-card-test {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 190px;
+  background: #ececec;
+}
+
+.pet-card-description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 18px 20px 0px 20px;
+}
+
+.pet-card-description--status {
+  display: block;
+  position: relative;
+  margin: 0px 0px 0px 12px;
+  font-weight: 300;
+  font-size: 14px;
+  color: #918b8b;
+}
+
+.pet-card-description--status::before {
+  position: absolute;
+  font-family: 'slick';
+  content: '•';
+  font-size: 8px;
+  left: -12px;
+  top: 6px;
+  color: #28c254;
+}
+
+.pet-card-description--status-done::before {
+  color: red;
+}
+
+.pet-card-description h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.pet-card-description span {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.pet-card-tags {
+  display: inline-block;
+  width: 100%;
+  padding: 15px 0px 0px 0px;
+  color: #28C254;
+  word-break: break-word;
+}
+
+.pet-card-tags span {
+  font-weight: 600;
+  padding-right: 8px;
+}

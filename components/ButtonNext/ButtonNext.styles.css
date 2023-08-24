@@ -1,0 +1,10 @@
+.petui-button-next-wrapper {
+  display: flex;
+  gap: 8px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.petui-button-next-icon {
+  width: 8px;
+}

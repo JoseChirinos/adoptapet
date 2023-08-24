@@ -1,0 +1,15 @@
+.pet-footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 50px 0px;
+  background-color: #29C254;
+}
+
+.pet-footer-author {
+  font-size: 14px;
+  font-weight: 700;
+  color: #020E05;
+}

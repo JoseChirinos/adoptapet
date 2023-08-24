@@ -1,0 +1,62 @@
+.pet-header-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 314px;
+  background-color: #29C254;
+  background-image: url(../../assets/images/landscape-mobile-min.jpg);
+  background-size: cover;
+  background-position: bottom;
+}
+
+.pet-header-image {
+  width: 102px;
+  height: auto;
+}
+
+.pet-header-logo {
+  width: auto;
+  height: 45px;
+}
+
+.pet-header-filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 24px 24px;
+  margin-top: -47px;
+  padding: 24px;
+  min-height: 94px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+}
+
+.pet-header-filter h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
+
+.pet-header-filter--button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  padding: 12px;
+  background: #28C254;
+  border: 0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  transition: all 0.2s ease;
+}
+
+.pet-header-filter--button:active {
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
+}
+
+.pet-header-filter--button-icon {
+  width: 20px;
+  height: auto;
+}

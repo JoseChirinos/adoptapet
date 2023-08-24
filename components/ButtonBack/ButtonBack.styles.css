@@ -1,0 +1,10 @@
+.petui-button-back-wrapper {
+  display: flex;
+  gap: 8px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.petui-button-back-icon {
+  width: 8px;
+}
