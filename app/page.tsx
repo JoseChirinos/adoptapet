@@ -40,6 +40,8 @@ async function getAnimals(token: string, page: number, limit: number = 30) {
       method: "GET",
       headers: {
         Authorization: "Bearer " + token,
+        "cache-control": "no-cache",
+        pragma: "no-cache",
       },
     }
   );

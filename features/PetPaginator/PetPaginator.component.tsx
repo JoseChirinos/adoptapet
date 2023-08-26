@@ -18,21 +18,24 @@ export default function PetPaginator({
   return (
     <div className="pet-paginator-container">
       <div className="pet-paginator-wrapper">
-        {backPage > 1 && (
-          <div>
-            <Link href={`?page=${backPage}`} className="pet-paginator-link">
-              <ButtonBack text="back" />
-            </Link>
-          </div>
-        )}
-        {backPage > 1 && <div>{currentPage}</div>}
-        {nextPage < totalPage && (
-          <div>
-            <Link href={`?page=${nextPage}`} className="pet-paginator-link">
-              <ButtonNext text="next" />
-            </Link>
-          </div>
-        )}
+        <div style={{ visibility: currentPage > 1 ? "visible" : "hidden" }}>
+          <Link href={`?page=${backPage}`} className="pet-paginator-link">
+            <ButtonBack text="back" />
+          </Link>
+        </div>
+        <div
+          className="pet-paginator-current"
+          style={{ visibility: currentPage > 1 ? "visible" : "hidden" }}
+        >
+          {currentPage}
+        </div>
+        <div
+          style={{ visibility: nextPage < totalPage ? "visible" : "hidden" }}
+        >
+          <Link href={`?page=${nextPage}`} className="pet-paginator-link">
+            <ButtonNext text="next" />
+          </Link>
+        </div>
       </div>
     </div>
   );

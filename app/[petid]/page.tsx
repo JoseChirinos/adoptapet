@@ -1,4 +1,3 @@
-// import { useRouter } from "next/navigation";
 import { PetidPropsInterface } from "@/interfaces/petid-props.interface";
 import PetDetail from "@/features/PetDetail/PetDetail.component";
 
@@ -44,15 +43,15 @@ export default async function PetId({ params }: PetidPropsInterface) {
   const petIdNumber: number = petid ? +petid : 0;
 
   const responseToken = await getToken();
-  console.log(responseToken);
   if (petIdNumber === 0) {
     return <div>ID INCORRECT</div>;
   }
-  const { animal } = await getAnimal(responseToken.access_token, petIdNumber);
+  const petData = await getAnimal(responseToken.access_token, petIdNumber);
+  console.log(petData);
 
   return (
     <div>
-      <PetDetail petData={animal} />
+      <PetDetail petData={petData?.animal} />
       {/* Hello {petid}
       <br />
       <button type="button" onClick={() => router.back()}>

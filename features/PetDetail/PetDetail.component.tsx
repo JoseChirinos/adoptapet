@@ -44,17 +44,20 @@ export default function PetDetail({ petData }: Props) {
             slidesToScroll={1}
             className="pet-detail-slider"
           >
-            {petData.photos &&
-              petData.photos.map((photo: any, index: number) => (
+            {petData?.photos &&
+              petData?.photos?.length > 0 &&
+              petData?.photos.map((photo: any, index: number) => (
                 <div key={`pet-photo-${petData?.id}-${index}`}>
                   <div className="pet-detail-test">
                     <Image
-                      src={photo.large}
-                      alt={petData.name}
-                      layout="fill"
-                      objectFit="cover"
+                      src={photo?.large}
+                      alt={petData?.name}
+                      fill
+                      style={{
+                        objectFit: "cover",
+                      }}
                       placeholder="blur"
-                      blurDataURL={photo.small}
+                      blurDataURL={photo?.small}
                     />
                   </div>
                 </div>
@@ -66,7 +69,7 @@ export default function PetDetail({ petData }: Props) {
             {petData?.name}
             <small
               className={`pet-detail-description--status ${
-                petData.status !== "adoptable" &&
+                petData?.status !== "adoptable" &&
                 "pet-detail-description--status-done"
               }`}
             >

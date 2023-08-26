@@ -87,6 +87,22 @@
   padding: 18px 20px 0px 20px;
 }
 
+.pet-detail-description h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.pet-detail-description span {
+  width: 100%;
+  word-break: break-word;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+
 .pet-detail-description--status {
   display: block;
   position: relative;
@@ -108,19 +124,6 @@
 
 .pet-detail-description--status-done::before {
   color: red;
-}
-
-.pet-detail-description h1 {
-  margin: 0;
-  padding: 0;
-  font-size: 40px;
-  font-weight: 700;
-  margin-bottom: 8px;
-}
-
-.pet-detail-description span {
-  font-size: 20px;
-  font-weight: 400;
 }
 
 .pet-detail-tags {
