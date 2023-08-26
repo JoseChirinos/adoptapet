@@ -30,6 +30,8 @@ async function getToken() {
     body: formBody,
   });
   const data = await response.json();
+  console.log("--------- token ---------");
+  console.log(data);
   return data;
 }
 
@@ -46,6 +48,8 @@ async function getAnimals(token: string, page: number, limit: number = 30) {
     }
   );
   const data = await response.json();
+  console.log("--------- animals ---------");
+  console.log(data);
   return data;
 }
 
