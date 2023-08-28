@@ -34,32 +34,33 @@ export default function PetCard({
 }: Props) {
   return (
     <div className="pet-card-container">
-      <div className="pet-card-slider">
-        <Slider
-          dots={true}
-          infinite={true}
-          speed={500}
-          slidesToShow={1}
-          slidesToScroll={1}
-          className="pet-card-slider"
-        >
-          {petData.photos &&
-            petData.photos.map((photo, index) => (
+      {petData && petData?.photos && petData?.photos?.length > 0 && (
+        <div className="pet-card-slider">
+          <Slider
+            dots={true}
+            infinite={true}
+            speed={500}
+            slidesToShow={1}
+            slidesToScroll={1}
+            className="pet-card-slider"
+          >
+            {petData.photos.map((photo, index) => (
               <div key={`pet-photo-${petData.id}-${index}`}>
                 <div className="pet-card-test">
                   <Image
                     src={photo.medium}
                     alt={petData.name}
-                    layout="fill"
-                    objectFit="cover"
-                    placeholder="blur"
-                    blurDataURL={photo.small}
+                    fill
+                    style={{
+                      objectFit: "cover",
+                    }}
                   />
                 </div>
               </div>
             ))}
-        </Slider>
-      </div>
+          </Slider>
+        </div>
+      )}
 
       <Link href={`./${petData.id}`} className="pet-card-link">
         <div className="pet-card-description">

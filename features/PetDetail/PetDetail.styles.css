@@ -36,6 +36,9 @@
 .pet-detail-zone {
   margin: 0px 32px;
   margin-top: -145px;
+  position: relative;
+  background: white;
+  border-radius: 8px;
 }
 
 .pet-detail-slider {

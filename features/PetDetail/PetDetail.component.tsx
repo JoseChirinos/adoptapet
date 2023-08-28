@@ -35,18 +35,17 @@ export default function PetDetail({ petData }: Props) {
         <AdoptapetIcon className="pet-detail-icon" />
       </div>
       <div className="pet-detail-zone">
-        <div className="pet-detail-slider">
-          <Slider
-            dots={true}
-            infinite={true}
-            speed={500}
-            slidesToShow={1}
-            slidesToScroll={1}
-            className="pet-detail-slider"
-          >
-            {petData?.photos &&
-              petData?.photos?.length > 0 &&
-              petData?.photos.map((photo: any, index: number) => (
+        {petData && petData?.photos && petData?.photos?.length > 0 && (
+          <div className="pet-detail-slider">
+            <Slider
+              dots={true}
+              infinite={true}
+              speed={500}
+              slidesToShow={1}
+              slidesToScroll={1}
+              className="pet-detail-slider"
+            >
+              {petData?.photos.map((photo: any, index: number) => (
                 <div key={`pet-photo-${petData?.id}-${index}`}>
                   <div className="pet-detail-test">
                     <Image
@@ -62,8 +61,9 @@ export default function PetDetail({ petData }: Props) {
                   </div>
                 </div>
               ))}
-          </Slider>
-        </div>
+            </Slider>
+          </div>
+        )}
         <div className="pet-detail-description">
           <h1>
             {petData?.name}

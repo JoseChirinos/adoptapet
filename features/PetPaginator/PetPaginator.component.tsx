@@ -17,21 +17,27 @@ export default function PetPaginator({
 
   return (
     <div className="pet-paginator-container">
-      <div className="pet-paginator-wrapper">
-        <div style={{ visibility: currentPage > 1 ? "visible" : "hidden" }}>
+      <div
+        className="pet-paginator-wrapper"
+        style={{
+          justifyContent:
+            currentPage > 1 && currentPage < totalPage
+              ? "space-between"
+              : "center",
+        }}
+      >
+        <div style={{ display: currentPage > 1 ? "block" : "none" }}>
           <Link href={`?page=${backPage}`} className="pet-paginator-link">
             <ButtonBack text="back" />
           </Link>
         </div>
         <div
           className="pet-paginator-current"
-          style={{ visibility: currentPage > 1 ? "visible" : "hidden" }}
+          style={{ display: currentPage > 1 ? "block" : "none" }}
         >
           {currentPage}
         </div>
-        <div
-          style={{ visibility: nextPage < totalPage ? "visible" : "hidden" }}
-        >
+        <div style={{ display: nextPage < totalPage ? "block" : "none" }}>
           <Link href={`?page=${nextPage}`} className="pet-paginator-link">
             <ButtonNext text="next" />
           </Link>
