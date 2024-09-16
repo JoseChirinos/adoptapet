@@ -7,21 +7,23 @@ interface Props {
 
 export default function PetList({ petList = [] }: Props) {
   return (
-    <div className="pet-list-container">
-      {petList &&
-        petList.map((pet, index) => (
-          <PetCard
-            petData={{
-              id: pet?.id,
-              name: pet?.name,
-              description: pet?.description,
-              status: pet?.status,
-              tags: pet?.tags,
-              photos: pet?.photos,
-            }}
-            key={`pet-item-${index}`}
-          />
-        ))}
+    <div className="container mx-auto mt-6">
+      <div className="flex flex-wrap justify-center items-center gap-10">
+        {petList &&
+          petList.map((pet, index) => (
+            <PetCard
+              petData={{
+                id: pet?.id,
+                name: pet?.name,
+                description: pet?.description,
+                status: pet?.status,
+                tags: pet?.tags,
+                photos: pet?.photos,
+              }}
+              key={`pet-item-${index}`}
+            />
+          ))}
+      </div>
     </div>
   );
 }

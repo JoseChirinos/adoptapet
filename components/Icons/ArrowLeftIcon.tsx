@@ -12,7 +12,7 @@ export default function ArrowLeftIcon({ className = "" }: Props) {
       className={className}
     >
       <path
-        stroke="#000"
+        stroke="currentColor"
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"

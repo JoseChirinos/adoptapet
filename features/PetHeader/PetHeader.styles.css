@@ -1,13 +1,5 @@
 .pet-header-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 314px;
-  background-color: #29C254;
-  background-image: url(../../assets/images/landscape-mobile-min.jpg);
-  background-size: cover;
-  background-position: bottom;
+  @apply flex flex-col justify-center items-center w-auto h-[314px] bg-[#29C254] bg-cover bg-center bg-[url('../../assets/images/landscape-mobile.webp')] lg:bg-bottom lg:bg-[url('../../assets/images/landscape-tablet.webp')] xl:bg-[url('../../assets/images/landscape.webp')]
 }
 
 .pet-header-image {
@@ -21,16 +13,7 @@
 }
 
 .pet-header-filter {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 24px 24px;
-  margin-top: -47px;
-  padding: 24px;
-  min-height: 94px;
-  background: #FFFFFF;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 16px;
+  @apply flex justify-between items-center p-6 h-[96px] bg-white shadow-lg rounded-2xl -mt-[47px]
 }
 
 .pet-header-filter h3 {

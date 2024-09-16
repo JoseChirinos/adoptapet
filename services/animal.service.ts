@@ -1,7 +1,7 @@
 export async function getAnimals(
   token: string,
   page: number,
-  limit: number = 30
+  limit: number = 12
 ) {
   const response = await fetch(
     `https://api.petfinder.com/v2/animals?limit=${limit}&page=${page}`,

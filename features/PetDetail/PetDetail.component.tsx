@@ -22,21 +22,28 @@ export default function PetDetail({ petData }: Props) {
   return (
     <>
       <div
-        className="pet-detail-background"
+        className="pet-detail-background shrink-0"
         style={{
           backgroundImage: `url(${headerPhoto})`,
         }}
       >
-        <Image
-          src={PetDogCatImage}
-          className="pet-detail-image"
-          alt="cat dog happy"
-        />
-        <AdoptapetIcon className="pet-detail-icon" />
+        <div className="relative container mx-auto">
+          <div className="absolute top-14 text-white pl-8 xl:pl-0">
+            <ButtonBack text="Go Back" onClick={() => router.back()} />
+          </div>
+        </div>
+        <div className="w-full h-full flex flex-col justify-center items-center -mt-[40px] sm:-mt-[80px] lg:mt-0">
+          <Image
+            src={PetDogCatImage}
+            className="pet-detail-image"
+            alt="cat dog happy"
+          />
+          <AdoptapetIcon className="pet-detail-icon" />
+        </div>
       </div>
-      <div className="pet-detail-zone">
+      <div className="pet-detail-zone lg:w-[580px]">
         {petData && petData?.photos && petData?.photos?.length > 0 && (
-          <div className="pet-detail-slider">
+          <div className="pet-detail-slider lg:w-[580px]">
             <Slider
               dots={true}
               infinite={true}
